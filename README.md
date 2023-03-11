@@ -9,17 +9,17 @@ Notre site comporte plusieurs services :
 
   Pour tout le monde :
 
-    - Une connexion
-    - Une Inscription
-    - Affichage des contacts
-    - Affichage des informations du compte de l'utilisateur
-    - Possibilité de modifier les informations de l'utilisateur
-    - Une déconnexion
+  - Une connexion
+  - Une Inscription
+  - Affichage des contacts
+  - Affichage des informations du compte de l'utilisateur
+  - Possibilité de modifier les informations de l'utilisateur
+  - Une déconnexion
 
   Pour les administrateurs seulement :
   
-    - Un onglet administration qui permet de voir les rôles de tous les utilisateurs
-    - Modification de chacun des rôles
+  - Un onglet administration qui permet de voir les rôles de tous les utilisateurs
+  - Modification de chacun des rôles
     
 
 Pour naviguer sur notre site voici la liste de toutes les routes possible :
@@ -40,14 +40,14 @@ Nous avons configuré un système de rôle, chaque utilisateurs qui créer un co
 
 Dans le fichier sql, il y a déjà pleins d'utilisateurs créés avec différents rôles. Pour que vous puissiez utiliser ces comptes, voici quelques identifiants et mdp :
 
-  username : bond
-  mdp : agentsecret
+  *username* : bond
+ / *mdp* : agentsecret
 
-  username : nate
-  mdp : azerty
+  *username* : nate
+ / *mdp* : azerty
 
-  username : Texas
-  mdp : Poudlard
+  *username* : Texas
+ / *mdp* : Poudlard
   
 
 Nous avons utilisés plusieurs bibliothèques de symfony telles que :
