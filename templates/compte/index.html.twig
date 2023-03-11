@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block body %}
+
+{% for message in app.flashes('success') %}
+<div class="alert alert-success">{{ message }}</div>
+{% endfor %}
+
+<h2>Mes informations :</h2>
+
+<table style="border: 2px solid black; border-collapse: collapse; width: 10em;font-size: 3ch;">
+    <thead>
+        <tr style="border: 2px solid black">
+            <th style="border: 2px solid black">Nom</th>
+            <th style="border: 2px solid black">Prenom</th>
+            <th style="border: 2px solid black">Pseudo</th>
+            <th style="border: 2px solid black">E-mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in compte %}
+        <tr>
+            <td style="border: 2px solid black">{{ contact.nom }}</td>
+            <td style="border: 2px solid black">{{ contact.prenom }}</td>
+            <td style="border: 2px solid black">{{ contact.username }}</td>
+            <td style="border: 2px solid black">{{ contact.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
+<li>
+    <a href="{{ path('app_compte_modifier') }}">Modifier</a>
+</li>
+
+{% endblock %}

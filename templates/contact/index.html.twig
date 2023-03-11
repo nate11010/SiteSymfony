@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes contacts{% endblock %}
+
+{% block body %}
+<h2>Voici votre liste de contacts :</h2>
+
+<table style="border: 2px solid black; border-collapse: collapse; width: 10em;font-size: 3ch;">
+    <thead>
+        <tr style="border: 2px solid black">
+            <th style="border: 2px solid black">Nom</th>
+            <th style="border: 2px solid black">Prenom</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in contacts %}
+        <tr>
+            <td style="border: 2px solid black">{{ contact.nom }}</td>
+            <td style="border: 2px solid black">{{ contact.prenom }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

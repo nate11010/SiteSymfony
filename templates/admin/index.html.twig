@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block body %}
+    <h1>Gérer les utilisateurs</h1>
+
+    <table class="table" style="border: 2px solid black; border-collapse: collapse; width: 10em;font-size: 3ch;">
+        <thead>
+            <tr>
+                <th style="border: 2px solid black">Nom</th>
+                <th style="border: 2px solid black">Rôle actuel</th>
+                <th style="border: 2px solid black">Nouveau rôle</th>
+            </tr>
+        </thead>
+        <tbody style="border: 2px solid black" >
+            {% for user in users %}
+                <tr>
+                    <td style="border: 2px solid black">{{ user.nom }}</td>
+                    <td style="border: 2px solid black">{{ user.roles|join(', ') }}</td>
+                    <td style="border: 2px solid black"><a href="{{ path('app_admin_edit', {'id': user.id}) }}">Modifier</a></td>
+                </tr>    
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+

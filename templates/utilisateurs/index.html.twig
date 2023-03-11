@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<h1>Accueil</h1>
+<h3>
+    Bienvenue {{ app.user.username }}
+</h3>
+    {% if is_granted("ROLE_ADMIN") %}
+        <ul>
+            <li>
+                <a href="{{ path('app_contact') }}">Mes contacts</a>
+            </li>
+            <li>
+                <a href="{{ path('app_compte') }}">Mon compte</a>
+            </li>
+            <br>
+            <li>
+                <a href="{{ path('app_admin') }}">Administration</a>
+            </li>
+            <br>
+            <li>
+                <a href="{{ path('app_logout') }}">Déconnexion</a>
+            </li>
+        </ul>
+        
+    {% else %}
+        <ul>
+            <li>
+                <a href="{{ path('app_contact') }}">Mes contacts</a>
+            </li>
+            <li>
+                <a href="{{ path('app_compte') }}">Mon compte</a>
+            </li>
+            <br>
+            <li>
+                <a href="{{ path('app_logout') }}">Déconnexion</a>
+            </li>
+        </ul>
+
+    {% endif %}
+
+{% endblock %}
