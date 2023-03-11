@@ -1,7 +1,7 @@
 # SiteSymfony
 Projet de faire un site en symfony dans le cadre du cours de développement web pour découvrir et travailler ce framework.
 
-Développé par COLLOMBET Nathan, OUASTI Redouane et MITTELHOCKAMP Nils.
+Développé par **COLLOMBET Nathan**, **OUASTI Redouane** et **MITTELHOCKAMP Nils**.
 
 Pour faire fonctionner ce site en local, il faut bien créer une base de données nommée "symfonycontact" sur phpmyadmin (sans mdp) et utiliser le fichier "symfonycontact.sql" pour initialiser toutes les données.
 
